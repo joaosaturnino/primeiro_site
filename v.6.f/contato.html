@@ -1,0 +1,272 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<title>Bootstrap Example</title> 
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"> </script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"> </script> 
+
+<!-- Meu CSS --> 
+    <style type="text/css"> 
+
+        .fundo_carossel{
+            background-color: #343a40;
+        }
+
+        .fundo{ 
+            background-color: lightslategray;
+            border:1px solid; 
+        } 
+        .fundo_menu{
+            padding-bottom:10px;
+            background-color: lightslategray;
+        }
+
+        .borda{ 
+            border:1px solid; 
+        } 
+
+        .largura{ 
+            width:150px; 
+        } 
+
+        .carousel-inner img{ 
+            width:50%; 
+            height:50%;
+        } 
+
+    </style> 
+
+</head> 
+
+<body> 
+
+<div class="container-fluid"> 
+
+    <!-- carossel --> 
+    <div class="row fundo_carossel"> 
+
+        <div class="col"> 
+
+            <div id="demo" class="carousel slide" data-ride="carousel">        
+
+                <!-- Quantidade de slides do carrossel --> 
+                <ul class="carousel-indicators"> 
+                <li data-target="#demo" data-slide-to="0" class="active"> </li> 
+                <li data-target="#demo" data-slide-to="1"> </li> 
+                <li data-target="#demo" data-slide-to="2"> </li> 
+                </ul> 
+
+                <!-- slideshow (fotos) -->
+                <div class="carousel-inner"> 
+
+                    <div class="carousel-item active"> 
+                        <img src="futsabao1.jpg" class="mx-auto d-block" alt=" Futebol de Sabão "> 
+                    </div> 
+
+                    <div class="carousel-item"> 
+                        <img src="touron3.jpg" class="mx-auto d-block" alt=" Touro Mecanico"> 
+                    </div> 
+
+                    <div class="carousel-item"> 
+                        <img src="tobtigrao3.jpg" class="mx-auto d-block" alt=" Tobogã Tigrão "> 
+                    </div> 
+
+                </div> 
+
+                <!-- Controles esquerdo e direito--> 
+                <a class="carousel-control-prev" href="#demo" data-slide="prev"> 
+                    <span class="carousel-control-prev-icon"></span> 
+                </a>  
+
+                <a class="carousel-control-next" href="#demo" data-slide="next"> 
+                    <span class="carousel-control-next-icon"></span> 
+                </a>  
+
+             </div>
+        </div>
+
+    </div> 
+
+    <!-- menu de navegação  --> 
+    <div class="row fundo_menu"> 
+
+        <div class="col">
+
+            <!-- Preto com o texto branco -->
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+                <ul class="navbar-nav">
+            
+                    <!-- <ul class="nav justify-content-center"> -->
+                    <li class="nav-item">
+                        <a class="nav-link active" href="site.html"> Home </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="brinquedos.html"> Brinquedos </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="sobre.html"> Sobre </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="contato.html"> Contato </a>
+                    </li>
+
+                </ul>
+
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+                  </form>
+            </nav>
+        </div>
+
+    </div> 
+
+    <div class="row fundo"> 
+
+        <!-- 4 colunas/largura 3 col-3 --> 
+        <div class="col-sm-3 borda">  
+            <a href="https://www.facebook.com/FreeWillyFestas" target="_blank" class="btn btn-dark largura" role="button"> Facebook </a>
+        </div> 
+
+        <div class="col-sm-3 borda"> 
+            <a href="https://www.facebook.com/FreeWillyFestas" target="_blank" class="btn btn-dark largura" role="button"> Instagram </a>
+        </div> 
+
+       
+    </div> 
+
+    <!-- Abrindo a primeira linha do leiaute --> 
+    <div class="row fundo"> 
+
+        <form class="needs-validation" novalidate>
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+                <label for="validationCustom01">Primeiro nome</label>
+                <input type="text" class="form-control" id="validationCustom01" placeholder="Nome" value="Mark" required>
+                <div class="valid-feedback">
+                  Tudo certo!
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="validationCustom02">Sobrenome</label>
+                <input type="text" class="form-control" id="validationCustom02" placeholder="Sobrenome" value="Otto" required>
+                <div class="valid-feedback">
+                  Tudo certo!
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="validationCustomUsername">Usuário</label>
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupPrepend">@</span>
+                  </div>
+                  <input type="text" class="form-control" id="validationCustomUsername" placeholder="Usuário" aria-describedby="inputGroupPrepend" required>
+                  <div class="invalid-feedback">
+                    Por favor, escolha um nome de usuário.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-6 mb-3">
+                <label for="validationCustom03">Cidade</label>
+                <input type="text" class="form-control" id="validationCustom03" placeholder="Cidade" required>
+                <div class="invalid-feedback">
+                  Por favor, informe uma cidade válida.
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="validationCustom04">Estado</label>
+                <input type="text" class="form-control" id="validationCustom04" placeholder="Estado" required>
+                <div class="invalid-feedback">
+                  Por favor, informe um estado válido.
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="validationCustom05">CEP</label>
+                <input type="text" class="form-control" id="validationCustom05" placeholder="CEP" required>
+                <div class="invalid-feedback">
+                  Por favor, informe um CEP válido.
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1"> Deixe a sua mensagem </label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+                  Concordo com os termos e condições
+                </label>
+                <div class="invalid-feedback">
+                  Você deve concordar, antes de continuar.
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Enviar</button>
+          </form>
+          
+          <script>
+          // Exemplo de JavaScript inicial para desativar envios de formulário, se houver campos inválidos.
+          (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+              // Pega todos os formulários que nós queremos aplicar estilos de validação Bootstrap personalizados.
+              var forms = document.getElementsByClassName('needs-validation');
+              // Faz um loop neles e evita o envio
+              var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                  if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                  }
+                  form.classList.add('was-validated');
+                }, false);
+              });
+            }, false);
+          })();
+          </script>
+<br><br>
+
+
+        </form>
+    </div>
+    <div class="row fundo"> 
+      <nav aria-label="Navegação de página exemplo">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="sobre.html" aria-label="Anterior">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Anterior</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="site.html">1</a></li>
+          <li class="page-item"><a class="page-link" href="brinquedos.html">2</a></li>
+          <li class="page-item"><a class="page-link" href="sobre.html">3</a></li>
+          <li class="page-item"><a class="page-link" href="contato.html">4</a></li>
+          <a class="page-link" href="site.html" aria-label="Próximo">
+          <span aria-hidden="true">&raquo;</span>
+          <span class="sr-only">Próximo</span>
+          </a>
+          </li>
+        </ul>
+  </nav>
+  </div>
+   
+</div> 
+
+</body> 
+
+</html> 
+
+ 
