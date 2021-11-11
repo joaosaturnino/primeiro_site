@@ -37,11 +37,42 @@
             width:50%; 
             height:50%;
         } 
-        h1{
-            font-family: arial;
-            font-style: italic;
-            font-variant: small-caps;
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-gap: 10px;
+            background-color: black;
+            padding: 10px;
         }
+
+        .grid-container > div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+
+        .fundo-grid-container{ 
+            background-color: lightslategray;
+        }
+
+        .item1 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        .item2{
+            grid-row-start: 2;
+            grid-row-end: 4;
+        }
+
+        .item5{
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+
+    
 
     </style> 
 
@@ -123,7 +154,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="sobre.html"> Sobre </a>
+                        <a class="nav-link active" href="sobre teste.html"> Sobre </a>
                     </li>
 
                     <li class="nav-item">
@@ -150,23 +181,22 @@
 
         <div class="col-sm-3 borda"> 
             <a href="https://www.facebook.com/FreeWillyFestas" target="_blank" class="btn btn-dark largura" role="button"> Instagram </a>
-        </div> 
+        </div>
 
     </div> 
 
-    <!-- Abrindo a primeira linha do leiaute --> 
-    <div class="row fundo"> 
 
-       
-        
-        <p class="text-info"> <img src="festa1.jpg" alt=" festa"></p>
-        <h1> Uma empresa tupaense com foco em festas e eventos em gerais, há mais de 15 anos atuando no ramo da atividade. <br>
-            A Free Willy Festas, conta com uma equipe de funcionários treinados e capacitados para que sua festa ou evento seja inesquecivel. <br>
-            Contamos também com brinquedos limpos e higienizados, seguindo todos os protocolos de higiene e limpeza. Manutenção dos brinquedos em dia para a segurança de seus filhos.
-        </h1> 
+    <div class="row fundo">
+        <div class="grid-container">
+            <div class="item1"> <img class="img-fluid rounded" src="festa1.jpg" alt="festa"> </div>
+            <div class="item2"> Uma empresa tupaense com foco em festas e eventos em gerais, há mais de 15 anos atuando no ramo da atividade.</div>
+            <div class="item3"> A Free Willy Festas, conta com uma equipe de funcionários treinados e capacitados para que sua festa ou evento seja inesquecivel.</div>  
+            <div class="item4"> Contamos também com brinquedos limpos e higienizados, seguindo todos os protocolos de higiene e limpeza. Manutenção dos brinquedos em dia para a segurança de seus filhos.</div>
+            <div class="item5"> <img class="img-fluid rounded" src="mega3.jpg" alt="toboga mega escalada"></div>   
+        </div>
 
-    </div> 
-    
+    </div>
+
     <div class="row fundo"> 
         <nav aria-label="Navegação de página exemplo">
             <ul class="pagination">
@@ -178,7 +208,7 @@
             </li>
             <li class="page-item"><a class="page-link" href="site.html">1</a></li>
             <li class="page-item"><a class="page-link" href="brinquedos teste.html">2</a></li>
-            <li class="page-item"><a class="page-link" href="sobre.html">3</a></li>
+            <li class="page-item"><a class="page-link" href="sobre teste.html">3</a></li>
             <li class="page-item"><a class="page-link" href="contato.html">4</a></li>
                 <a class="page-link" href="contato.html" aria-label="Próximo">
                 <span aria-hidden="true">&raquo;</span>
