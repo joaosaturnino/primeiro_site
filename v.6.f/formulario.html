@@ -1,0 +1,60 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<title>Bootstrap Example</title> 
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"> </script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"> </script> 
+</head>
+
+<body>
+
+    <div class="container-fluid">
+
+        <form name="form1" method="post" action="enviado.html">
+
+            <label name="lblnome" id="lblnome"> Nome: </label>
+            <input type="texte" name="nome" id="nome" sizw="30" maxlength="30" placeholder="nome e sobrenome">
+            <br>
+            <label name="lblrua" id="lblrua"> Rua: </label>
+            <input type="text" name="rua" id="rua" size="40" maxlength="40" >
+            <br>
+            <label name="lblnumero" id="lblnumero"> Número: </label>
+            <input type="text" name="numero" id="numero" size="10" maxlength="10">
+            <br>
+            <label name="lblcidade" id="lblcidade"> Cidade: </label>
+            <input type="text" name="cidade" id="cidade" size="30" maxlength="30">
+            <br>
+            <select name="estado">
+                <option value="SP"> São Paulo </option>
+                <option value="RJ"> Rio de Janeiro </option>
+                <option value="PR"> Paraná </option>
+                <option value="SC"> Santa Catarina </option>
+            </select>
+
+            <br>
+            <p> Sexo: </p>
+            <input type="radio" name="sexo" value="feminino"> Feminino <br>
+            <input type="radio" name="sexo" value="masculino"> Masculino <br>
+            <br>
+
+            <p>Selecione a sua idade: </p>
+            <input type="checkbox" id="idade1" name="idade1" value="30"> De 0 a 30
+            <br>
+            <input type="checkbox" id="idade2" name="idade2" value="60"> De 31 a 60
+            <br>
+            <input type="checkbox" id="idade3" name="idade3" value="100"> De 61 a 100
+            <br><br>
+
+            <p> Digite sua biografia: </p>
+            <textarea name="biografia" id="biografia" rows="6" cols="30"></textarea>
+            <br>
+            <input type="submit" name="botao" value="Enviar">
+            <input type="reset" name="limpar" value="Limpar">
+
+        </form>
+    </div>
+</body>
