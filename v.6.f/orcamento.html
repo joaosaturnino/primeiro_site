@@ -202,7 +202,7 @@
     <!-- Abrindo a primeira linha do leiaute --> 
     <div class="row fundo"> 
 
-        <form class="needs-validation" novalidate>
+      <form name="form1" method="post" action="enviado.html">
             <div class="form-row">
               <div class="col-md-4 mb-3">
                 <label for="validationCustom01">Primeiro nome</label>
@@ -241,10 +241,12 @@
               </div>
               <div class="col-md-3 mb-3">
                 <label for="validationCustom04">Estado</label>
-                <input type="text" class="form-control" id="validationCustom04" placeholder="Estado" required>
-                <div class="invalid-feedback">
-                  Por favor, informe um estado válido.
-                </div>
+                <select name="estado">
+                  <option value="SP"> São Paulo </option>
+                  <option value="RJ"> Rio de Janeiro </option>
+                  <option value="PR"> Paraná </option>
+                  <option value="SC"> Santa Catarina </option>
+              </select>
               </div>
               <div class="col-md-3 mb-3">
                 <label for="validationCustom05">CEP</label>
@@ -270,30 +272,11 @@
               </div>
             </div>
             <button class="btn btn-primary" type="submit">Enviar</button>
+            <input type="reset" name="limpar" value="Limpar">
+
           </form>
           
-          <script>
-          // Exemplo de JavaScript inicial para desativar envios de formulário, se houver campos inválidos.
-          (function() {
-            'use strict';
-            window.addEventListener('load', function() {
-              // Pega todos os formulários que nós queremos aplicar estilos de validação Bootstrap personalizados.
-              var forms = document.getElementsByClassName('needs-validation');
-              // Faz um loop neles e evita o envio
-              var validation = Array.prototype.filter.call(forms, function(form) {
-                form.addEventListener('submit', function(event) {
-                  if (form.checkValidity() === false) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                  }
-                  form.classList.add('was-validated');
-                }, false);
-              });
-            }, false);
-          })();
-          </script>
-<br><br>
-
+          
 
         </form>
     </div>
